@@ -26,15 +26,15 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">🧠 Advanced Data Science Visualization Dashboard</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-font">An interactive platform for exploring, visualizing, and analyzing datasets with PCA, Clustering, and Dynamic Charts</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">  DATA SCIENCE ASSIGNMENT </p>', unsafe_allow_html=True)
+
 
 # Team Information
 st.markdown("""
 <div style='text-align: center; background: white; border: 2px solid black; padding: 15px; border-radius: 10px; margin: 20px 0;'>
-    <p style='color: black; font-size: 18px; font-weight: 600; margin: 0;'>👥 Developed by Team Data Scientists | ECE-I Section</p>
+    <p style='color: black; font-size: 18px; font-weight: 600; margin: 0;'>OUR TEAM  | ECE-I Section</p>
     <p style='color: black; font-size: 14px; margin: 5px 0 0 0;'>
-        1. S.V. Chirudeep Reddy (Roll No: 64) &nbsp;|&nbsp; 2. U. Ganesh (Roll No: 11) &nbsp;|&nbsp; 3. Kyathendra Venkata Surya (Roll No: 57) &nbsp;|&nbsp; 4. Dev Rehanth (Roll No: 55)
+        1. S.V. Chirudeep Reddy (Roll No: 64) &nbsp;|&nbsp; 2. U. Ganesh (Roll No: 57) &nbsp;|&nbsp; 3. Kyathendra Venkata Surya (Roll No: 11) &nbsp;|&nbsp; 4. Dev Rehanth (Roll No: 55)
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -65,7 +65,7 @@ with st.expander("📚 Assignment Details - Click to View", expanded=False):
     
     ---
     **Section:** ECE-I  
-    **Team Members:** S.V. Chirudeep Reddy (64), U. Ganesh (11), Kyathendra Venkata Surya (57), Dev Rehanth (55)
+    **Team Members:** S.V. Chirudeep Reddy (64), U. Ganesh (57), Kyathendra Venkata Surya (11), Dev Rehanth (55)
     """)
 
 st.write("---")
@@ -113,7 +113,7 @@ if df is not None:
     theme = st.sidebar.radio("Theme", ["Light", "Dark"])
     
     if theme == "Dark":
-        st.markdown('<style>body { background-color: #0E1117; color: white; }</style>', unsafe_allow_html=True)
+        st.markdown('<style>body { background-color: #0E5517; color: white; }</style>', unsafe_allow_html=True)
     
     # ---------------- SUMMARY -------------------
     if show_summary:
@@ -316,7 +316,7 @@ else:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; padding: 30px; background: white; border: 2px solid black; border-radius: 10px; margin-top: 40px;'>
-    <h3 style='color: black; margin-bottom: 15px;'>👥 Meet the Team - ECE-I Section</h3>
+    <h3 style='color: black; margin-bottom: 15px;'> Meet the Team - ECE-I Section</h3>
     <div style='display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;'>
         <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
             <p style='margin: 0; color: white; font-weight: 600;'>S.V. Chirudeep Reddy</p>
@@ -324,11 +324,11 @@ st.markdown("""
         </div>
         <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
             <p style='margin: 0; color: white; font-weight: 600;'>U. Ganesh</p>
-            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 11</p>
+            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 57</p>
         </div>
         <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
             <p style='margin: 0; color: white; font-weight: 600;'>Kyathendra Venkata Surya</p>
-            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 57</p>
+            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 11</p>
         </div>
         <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
             <p style='margin: 0; color: white; font-weight: 600;'>Dev Rehanth</p>
@@ -336,8 +336,9 @@ st.markdown("""
         </div>
     </div>
     <p style='margin-top: 20px; color: black; font-size: 14px;'>
-        Created with ❤️ for Data Science Assignment | © 2025
+        Created with  for Data Science Assignment | © 2025
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
