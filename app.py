@@ -26,8 +26,44 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">🧠 Advanced Data Science Visualization Dashboard</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-font">An interactive platform for exploring, visualizing, and analyzing datasets with PCA, Clustering, and Dynamic Charts</p>', unsafe_allow_html=True)
+# Topic and Questions
+st.markdown("""
+<style>
+.big-font {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sub-font {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.question {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+</style>
+
+<p class="big-font">🦠 COVID-19 Dataset Analysis</p>
+<p class="sub-font">An interactive platform for exploring, visualizing, and analyzing COVID-19 data with trends, clustering, and dynamic charts</p>
+
+<div class="question">
+1. Perform data pre-processing steps such as handling missing values, treating outliers, and applying feature scaling where necessary.<br>
+2. Use appropriate data visualization techniques (histograms, scatterplots, heatmaps, boxplots, etc.) to explore the distribution of features and relationships between variables.<br>
+3. Apply Principal Component Analysis (PCA) to reduce the dimensionality of the dataset while retaining maximum variance. Visualize the data in the transformed feature space and interpret the results.<br>
+4. Based on your findings, discuss the patterns or clusters observed in the dataset and explain how they could be useful for decision making.
+</div>
+""", unsafe_allow_html=True)
+
+st.write("---")
+
 
 # Team Information
 st.markdown("""
@@ -277,6 +313,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
