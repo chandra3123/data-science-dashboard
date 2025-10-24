@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 # --------------- PAGE CONFIG -------------------
-st.set_page_config(page_title="Data Science Dashboard", layout="wide", page_icon="🧠")
+st.set_page_config(page_title="Data Science Dashboard", layout="wide", page_icon="datasciece ece - I")
 
 # --------------- HEADER SECTION ----------------
 st.markdown("""
@@ -28,6 +28,17 @@ st.markdown("""
 
 st.markdown('<p class="big-font">🧠 Advanced Data Science Visualization Dashboard</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-font">An interactive platform for exploring, visualizing, and analyzing datasets with PCA, Clustering, and Dynamic Charts</p>', unsafe_allow_html=True)
+
+# Team Information
+st.markdown("""
+<div style='text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 10px; margin: 20px 0;'>
+    <p style='color: white; font-size: 18px; font-weight: 600; margin: 0;'>OUR TEAM</p>
+    <p style='color: #e0e0e0; font-size: 14px; margin: 5px 0 0 0;'>
+        1. S.V. Chirudeep Reddy &nbsp;|&nbsp; 2. U. Ganesh &nbsp;|&nbsp; 3. Kyathendra Venkata Surya &nbsp;|&nbsp; 4. Dev Rehanth
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 st.write("---")
 
 # --------------- LOAD DEFAULT OR UPLOADED DATA -------------------
@@ -215,4 +226,29 @@ else:
         st.markdown("- Light/Dark themes")
         st.markdown("- Data cleaning options")
         st.markdown("- Interactive controls")
+
+# Footer with Team Information
+st.markdown("---")
+st.markdown("""
+<div style='text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px; margin-top: 40px;'>
+    <h3 style='color: #667eea; margin-bottom: 15px;'>👥 Meet the Team</h3>
+    <div style='display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;'>
+        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
+            <p style='margin: 0; color: #667eea; font-weight: 600;'>1. S.V. Chirudeep Reddy</p>
+        </div>
+        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
+            <p style='margin: 0; color: #667eea; font-weight: 600;'>2. U. Ganesh</p>
+        </div>
+        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
+            <p style='margin: 0; color: #667eea; font-weight: 600;'>3. Kyathendra Venkata Surya</p>
+        </div>
+        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
+            <p style='margin: 0; color: #667eea; font-weight: 600;'>4. Dev Rehanth</p>
+        </div>
+    </div>
+    <p style='margin-top: 20px; color: #666; font-size: 14px;'>
+        Created with ❤️ for Data Science | © 2025
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
