@@ -188,7 +188,33 @@ if df is not None:
     if len(numeric_cols) >= 2:
         st.subheader("🔥 Correlation Heatmap")
         corr = df[numeric_cols].corr()
-        fig3 = px.imshow(corr, text_auto=True, color_continuous_scale="RdBu", title="Feature Correlation Matrix")
+        
+        # Create improved heatmap with no gaps
+        fig3 = go.Figure(data=go.Heatmap(
+            z=corr.values,
+            x=corr.columns,
+            y=corr.columns,
+            colorscale='RdBu',
+            zmid=0,  # Center the colorscale at 0
+            text=np.round(corr.values, 2),
+            texttemplate='%{text}',
+            textfont={"size": 10},
+            colorbar=dict(title="Correlation"),
+            hoverongaps=False,
+            xgap=0,  # Remove horizontal gaps
+            ygap=0   # Remove vertical gaps
+        ))
+        
+        fig3.update_layout(
+            title="Feature Correlation Matrix",
+            xaxis_title="Features",
+            yaxis_title="Features",
+            width=800,
+            height=800,
+            xaxis={'side': 'bottom'},
+            yaxis={'autorange': 'reversed'}  # Put first variable at top
+        )
+        
         st.plotly_chart(fig3, use_container_width=True)
     
     # ---------------- PCA & CLUSTERING -------------------
@@ -312,6 +338,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
