@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 # --------------- PAGE CONFIG -------------------
-st.set_page_config(page_title="Data Science Dashboard", layout="wide", page_icon="datasciece ece - I")
+st.set_page_config(page_title="Data Science Dashboard", layout="wide", page_icon="🧠")
 
 # --------------- HEADER SECTION ----------------
 st.markdown("""
@@ -26,79 +26,47 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Topic and Questions
-st.markdown("""
-<style>
-.big-font {
-    font-size: 28px;
-    font-weight: 700;
-    color: #000000;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.sub-font {
-    font-size: 16px;
-    font-weight: 500;
-    color: #333333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.question {
-    font-size: 16px;
-    color: #000000;
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-</style>
-
-<p class="big-font">COVID-19 Dataset Analysis</p>
-
-<div class="question">
-1. Perform data pre-processing steps such as handling missing values, treating outliers, and applying feature scaling where necessary.<br>
-2. Use appropriate data visualization techniques (histograms, scatterplots, heatmaps, boxplots, etc.) to explore the distribution of features and relationships between variables.<br>
-3. Apply Principal Component Analysis (PCA) to reduce the dimensionality of the dataset while retaining maximum variance. Visualize the data in the transformed feature space and interpret the results.<br>
-4. Based on your findings, discuss the patterns or clusters observed in the dataset and explain how they could be useful for decision making.
-</div>
-""", unsafe_allow_html=True)
-
-st.write("---")
-
+st.markdown('<p class="big-font">🧠 Advanced Data Science Visualization Dashboard</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-font">An interactive platform for exploring, visualizing, and analyzing datasets with PCA, Clustering, and Dynamic Charts</p>', unsafe_allow_html=True)
 
 # Team Information
 st.markdown("""
-<style>
-.team-section {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #000000;
-    margin: 20px 0;
-}
-.team-title {
-    color: #000000;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-.team-names {
-    color: #333333;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.8;
-}
-</style>
-
-<div class='team-section'>
-    <p class='team-title'>OUR TEAM</p>
-    <p class='team-names'>
-        1. S.V. Chirudeep Reddy &nbsp;|&nbsp; 
-        2. U. Ganesh &nbsp;|&nbsp; 
-        3. Kyathendra Venkata Surya &nbsp;|&nbsp; 
-        4. Dev Rehanth
+<div style='text-align: center; background: white; border: 2px solid black; padding: 15px; border-radius: 10px; margin: 20px 0;'>
+    <p style='color: black; font-size: 18px; font-weight: 600; margin: 0;'>👥 Developed by Team Data Scientists | ECE-I Section</p>
+    <p style='color: black; font-size: 14px; margin: 5px 0 0 0;'>
+        1. S.V. Chirudeep Reddy (Roll No: 64) &nbsp;|&nbsp; 2. U. Ganesh (Roll No: 11) &nbsp;|&nbsp; 3. Kyathendra Venkata Surya (Roll No: 57) &nbsp;|&nbsp; 4. Dev Rehanth (Roll No: 55)
     </p>
 </div>
 """, unsafe_allow_html=True)
+
+# Assignment Question
+with st.expander("📚 Assignment Details - Click to View", expanded=False):
+    st.markdown("""
+    ### 📋 Assignment Questions:
+    
+    **1. Data Pre-processing:**
+    - Perform data pre-processing steps such as handling missing values
+    - Treating outliers
+    - Applying feature scaling where necessary
+    
+    **2. Data Visualization:**
+    - Use appropriate data visualization techniques (histograms, scatterplots, heatmaps, boxplots, etc.)
+    - Explore the distribution of features and relationships between variables
+    
+    **3. Principal Component Analysis (PCA):**
+    - Apply Principal Component Analysis (PCA) to reduce the dimensionality of the dataset
+    - Retain maximum variance
+    - Visualize the data in the transformed feature space
+    - Interpret the results
+    
+    **4. Analysis & Insights:**
+    - Discuss the patterns or clusters observed in the dataset
+    - Explain how they could be useful for decision-making
+    
+    ---
+    **Section:** ECE-I  
+    **Team Members:** S.V. Chirudeep Reddy (64), U. Ganesh (11), Kyathendra Venkata Surya (57), Dev Rehanth (55)
+    """)
 
 st.write("---")
 
@@ -185,7 +153,7 @@ if df is not None:
             fig2 = px.scatter(df, x=x_feat, y=y_feat, color_discrete_sequence=["#00CC96"], title=f"{x_feat} vs {y_feat}")
             st.plotly_chart(fig2, use_container_width=True)
     
-      if len(numeric_cols) >= 2:
+    if len(numeric_cols) >= 2:
         st.subheader("🔥 Correlation Heatmap")
         
         # Calculate correlation and handle NaN values
@@ -252,6 +220,7 @@ if df is not None:
             - **Diagonal = 1**: Each variable perfectly correlates with itself
             - Values removed: Columns with no variance or all missing data
             """)
+    
     # ---------------- PCA & CLUSTERING -------------------
     if enable_pca and len(numeric_cols) > 2:
         st.header("🧩 PCA & K-Means Clustering")
@@ -352,31 +321,29 @@ else:
 # Footer with Team Information
 st.markdown("---")
 st.markdown("""
-<div style='text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px; margin-top: 40px;'>
-    <h3 style='color: #667eea; margin-bottom: 15px;'>Our Team</h3>
+<div style='text-align: center; padding: 30px; background: white; border: 2px solid black; border-radius: 10px; margin-top: 40px;'>
+    <h3 style='color: black; margin-bottom: 15px;'>👥 Meet the Team - ECE-I Section</h3>
     <div style='display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;'>
-        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
-            <p style='margin: 0; color: #667eea; font-weight: 600;'>1. S.V. Chirudeep Reddy</p>
+        <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
+            <p style='margin: 0; color: white; font-weight: 600;'>S.V. Chirudeep Reddy</p>
+            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 64</p>
         </div>
-        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
-            <p style='margin: 0; color: #667eea; font-weight: 600;'>2. U. Ganesh</p>
+        <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
+            <p style='margin: 0; color: white; font-weight: 600;'>U. Ganesh</p>
+            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 11</p>
         </div>
-        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
-            <p style='margin: 0; color: #667eea; font-weight: 600;'>3. Kyathendra Venkata Surya</p>
+        <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
+            <p style='margin: 0; color: white; font-weight: 600;'>Kyathendra Venkata Surya</p>
+            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 57</p>
         </div>
-        <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
-            <p style='margin: 0; color: #667eea; font-weight: 600;'>4. Dev Rehanth</p>
+        <div style='background: black; padding: 15px 25px; border-radius: 8px; border: 1px solid black;'>
+            <p style='margin: 0; color: white; font-weight: 600;'>Dev Rehanth</p>
+            <p style='margin: 5px 0 0 0; color: white; font-size: 12px;'>Roll No: 55</p>
         </div>
     </div>
-    <p style='margin-top: 20px; color: #666; font-size: 14px;'>
-         for Data Science ECE SEC - I | © 2025
+    <p style='margin-top: 20px; color: black; font-size: 14px;'>
+        Created with ❤️ for Data Science Assignment | © 2025
     </p>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-
-
-
 
