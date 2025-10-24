@@ -31,10 +31,36 @@ st.markdown('<p class="sub-font">An interactive platform for exploring, visualiz
 
 # Team Information
 st.markdown("""
-<div style='text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 10px; margin: 20px 0;'>
-    <p style='color: white; font-size: 18px; font-weight: 600; margin: 0;'>OUR TEAM</p>
-    <p style='color: #e0e0e0; font-size: 14px; margin: 5px 0 0 0;'>
-        1. S.V. Chirudeep Reddy &nbsp;|&nbsp; 2. U. Ganesh &nbsp;|&nbsp; 3. Kyathendra Venkata Surya &nbsp;|&nbsp; 4. Dev Rehanth
+<style>
+.team-section {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    margin: 20px 0;
+}
+.team-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.team-names {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+</style>
+
+<div class='team-section'>
+    <p class='team-title'>OUR TEAM</p>
+    <p class='team-names'>
+        1. S.V. Chirudeep Reddy &nbsp;|&nbsp; 
+        2. U. Ganesh &nbsp;|&nbsp; 
+        3. Kyathendra Venkata Surya &nbsp;|&nbsp; 
+        4. Dev Rehanth
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -251,4 +277,5 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
