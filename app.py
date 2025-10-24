@@ -257,7 +257,7 @@ else:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; padding: 30px; background: #f8f9fa; border-radius: 10px; margin-top: 40px;'>
-    <h3 style='color: #667eea; margin-bottom: 15px;'>👥 Meet the Team</h3>
+    <h3 style='color: #667eea; margin-bottom: 15px;'>Our Team</h3>
     <div style='display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;'>
         <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);'>
             <p style='margin: 0; color: #667eea; font-weight: 600;'>1. S.V. Chirudeep Reddy</p>
@@ -273,9 +273,10 @@ st.markdown("""
         </div>
     </div>
     <p style='margin-top: 20px; color: #666; font-size: 14px;'>
-        Created with ❤️ for Data Science | © 2025
+         for Data Science ECE SEC - I | © 2025
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
