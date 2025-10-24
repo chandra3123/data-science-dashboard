@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 # --------------- PAGE CONFIG -------------------
-st.set_page_config(page_title="Data Science Dashboard", layout="wide", page_icon="🧠")
+st.set_page_config(page_title="Data Science Dashboard", layout="wide", page_icon="ECE-I DATA SCIENCE ASSIGNEMNT")
 
 # --------------- HEADER SECTION ----------------
 st.markdown("""
@@ -340,6 +340,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
