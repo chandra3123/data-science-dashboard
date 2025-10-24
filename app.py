@@ -185,7 +185,7 @@ if df is not None:
             fig2 = px.scatter(df, x=x_feat, y=y_feat, color_discrete_sequence=["#00CC96"], title=f"{x_feat} vs {y_feat}")
             st.plotly_chart(fig2, use_container_width=True)
     
-       if len(numeric_cols) >= 2:
+      if len(numeric_cols) >= 2:
         st.subheader("🔥 Correlation Heatmap")
         
         # Calculate correlation and handle NaN values
@@ -252,7 +252,6 @@ if df is not None:
             - **Diagonal = 1**: Each variable perfectly correlates with itself
             - Values removed: Columns with no variance or all missing data
             """)
-    
     # ---------------- PCA & CLUSTERING -------------------
     if enable_pca and len(numeric_cols) > 2:
         st.header("🧩 PCA & K-Means Clustering")
