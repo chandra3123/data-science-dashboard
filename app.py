@@ -336,9 +336,10 @@ st.markdown("""
         </div>
     </div>
     <p style='margin-top: 20px; color: black; font-size: 14px;'>
-        Created with  for Data Science Assignment | © 2025
+        Created for Data Science Assignment | © 2025
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
