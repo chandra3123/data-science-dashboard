@@ -51,8 +51,7 @@ st.markdown("""
 }
 </style>
 
-<p class="big-font">🦠 COVID-19 Dataset Analysis</p>
-<p class="sub-font">An interactive platform for exploring, visualizing, and analyzing COVID-19 data with trends, clustering, and dynamic charts</p>
+<p class="big-font">COVID-19 Dataset Analysis</p>
 
 <div class="question">
 1. Perform data pre-processing steps such as handling missing values, treating outliers, and applying feature scaling where necessary.<br>
@@ -313,6 +312,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
