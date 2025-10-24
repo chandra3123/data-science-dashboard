@@ -185,37 +185,73 @@ if df is not None:
             fig2 = px.scatter(df, x=x_feat, y=y_feat, color_discrete_sequence=["#00CC96"], title=f"{x_feat} vs {y_feat}")
             st.plotly_chart(fig2, use_container_width=True)
     
-    if len(numeric_cols) >= 2:
+       if len(numeric_cols) >= 2:
         st.subheader("🔥 Correlation Heatmap")
+        
+        # Calculate correlation and handle NaN values
         corr = df[numeric_cols].corr()
+        
+        # Remove columns/rows that are all NaN
+        corr_clean = corr.dropna(how='all', axis=0).dropna(how='all', axis=1)
+        
+        # Fill remaining NaN values with 0 (no correlation)
+        corr_clean = corr_clean.fillna(0)
         
         # Create improved heatmap with no gaps
         fig3 = go.Figure(data=go.Heatmap(
-            z=corr.values,
-            x=corr.columns,
-            y=corr.columns,
-            colorscale='RdBu',
+            z=corr_clean.values,
+            x=corr_clean.columns.tolist(),
+            y=corr_clean.columns.tolist(),
+            colorscale='RdBu_r',  # Reversed: Red=positive, Blue=negative
             zmid=0,  # Center the colorscale at 0
-            text=np.round(corr.values, 2),
+            text=np.round(corr_clean.values, 2),
             texttemplate='%{text}',
-            textfont={"size": 10},
-            colorbar=dict(title="Correlation"),
+            textfont={"size": 10, "color": "black"},
+            colorbar=dict(
+                title="Correlation<br>Coefficient",
+                titleside="right",
+                tickmode="linear",
+                tick0=-1,
+                dtick=0.5
+            ),
             hoverongaps=False,
-            xgap=0,  # Remove horizontal gaps
-            ygap=0   # Remove vertical gaps
+            xgap=1,  # Small gap for better visibility
+            ygap=1   # Small gap for better visibility
         ))
         
         fig3.update_layout(
-            title="Feature Correlation Matrix",
-            xaxis_title="Features",
-            yaxis_title="Features",
-            width=800,
-            height=800,
-            xaxis={'side': 'bottom'},
-            yaxis={'autorange': 'reversed'}  # Put first variable at top
+            title={
+                'text': "Feature Correlation Matrix",
+                'x': 0.5,
+                'xanchor': 'center',
+                'font': {'size': 20, 'color': '#667eea', 'family': 'Arial Black'}
+            },
+            xaxis={
+                'side': 'bottom',
+                'tickangle': -45,
+                'tickfont': {'size': 10}
+            },
+            yaxis={
+                'autorange': 'reversed',
+                'tickfont': {'size': 10}
+            },
+            width=None,  # Let it be responsive
+            height=max(600, len(corr_clean) * 50),  # Dynamic height based on features
+            plot_bgcolor='white',
+            paper_bgcolor='white'
         )
         
         st.plotly_chart(fig3, use_container_width=True)
+        
+        # Show explanation
+        with st.expander("ℹ️ How to Read the Correlation Heatmap"):
+            st.markdown("""
+            - **Dark Red** (close to -1): Strong negative correlation
+            - **White** (close to 0): No correlation
+            - **Dark Blue** (close to 1): Strong positive correlation
+            - **Diagonal = 1**: Each variable perfectly correlates with itself
+            - Values removed: Columns with no variance or all missing data
+            """)
     
     # ---------------- PCA & CLUSTERING -------------------
     if enable_pca and len(numeric_cols) > 2:
@@ -338,6 +374,7 @@ st.markdown("""
     </p>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
