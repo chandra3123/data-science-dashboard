@@ -175,13 +175,7 @@ if df is not None:
             text=np.round(corr_clean.values, 2),
             texttemplate='%{text}',
             textfont={"size": 10, "color": "black"},
-            colorbar=dict(
-                title="Correlation<br>Coefficient",
-                titleside="right",
-                tickmode="linear",
-                tick0=-1,
-                dtick=0.5
-            ),
+            colorbar=dict(title="Correlation"),
             hoverongaps=False,
             xgap=1,  # Small gap for better visibility
             ygap=1   # Small gap for better visibility
